@@ -293,6 +293,7 @@ $succ = (function($) {
         var catSet = {}, catSetList = [];
         for (var qkey in data) {
 //            console.log(qkey);
+            try{
             for (var key in data[qkey].pages) {
                 var singleCat = 0;
 //                console.log(qkey,key);
@@ -315,6 +316,10 @@ $succ = (function($) {
                     $results.append($li.append($lul));
                     totalCat += singleCat;
                 }
+            }
+        }
+            catch(e){
+                cosonle.log('err');
             }
         }
         if (totalCat > 0) {
@@ -418,10 +423,13 @@ function searchSummary() {
                         searchJSON(sterms[i]),
                         function(data) {
                             //res[data.requestid] = {'pages': data.query.pages};
+                            try{
                             DCPT.data[data.requestid] = {'pages': data.query.pages};
                             DCPT.set(data.requestid, {'pages': data.query.pages});
                             return DCPT.data[data.requestid];
-
+                            }catch(e){
+                                
+                            }
                             //                    
 
 
