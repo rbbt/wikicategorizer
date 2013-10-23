@@ -357,10 +357,10 @@ div.display-droplist ul{
 
 
 
-#logo > img:hover{
+/*#logo > img:hover{
     -webkit-animation: loading 2s infinite linear;
     animation: loading 2s infinite linear;
-}
+}*/
 
   .anim img{
        -webkit-animation: loading 2s infinite linear;
