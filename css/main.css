@@ -159,6 +159,9 @@ margin: -15px 0 0 0;
     font-size: 24px;
     font-family: hoefler text, times new roman, serif;
 }
+#info fieldset{
+    display: inline;
+}
 
 #searchterm{
     /*border:0;*/
